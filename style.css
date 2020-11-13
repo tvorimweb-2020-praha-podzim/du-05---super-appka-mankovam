@@ -10,19 +10,28 @@ body {
 
 /*------NAVIGACE----*/
 
-.navigace {
+nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: #fff;
     color: #48418e;
-    padding-top: 1rem;
 }
 
 .navi {
     padding: 1rem 2rem;
-    flex-grow: 1 1 50%;
+    flex: 1 1 50%;
+    text-decoration: none;
+    text-align: center;
 }
+
+.navi:hover,
+.navi:focus,
+.navi:active {
+    color: #fff;
+    background-color: #48418e;
+}
+
 
 .appka {
     text-transform: uppercase;
@@ -31,7 +40,7 @@ body {
 
 /*------HLAVIČKA----*/
 
-.hlavicka {
+header {
     background-image: linear-gradient(to right, rgba(37,19,61,1) 0%, rgba(170,84,119,1) 75%);
     margin: 0;
     color: white;
@@ -61,14 +70,12 @@ h1 {
     margin: 1rem 0;
     border-radius: 10px;
     border: 1px solid #fff;
+    max-width: 20rem;
 }
 
-.button1 a:hover,
-.button1 a:focus,
-.button1 a:active, 
-.button2 a:hover,
-.button2 a:focus,
-.button2 a:active {
+.buttony a:hover,
+.buttony a:focus,
+.buttony a:active {
     background-color:#48418e;
 }
 
@@ -108,7 +115,7 @@ p {
 
 /*------PATIČKA----*/
 
-.paticka {
+footer {
     margin: 0;
     padding: 0.5rem 2rem;
     color: white;
@@ -116,24 +123,23 @@ p {
     text-align: center;
 }
 
-@media screen and (min-width: 460px) {
+@media screen and (min-width: 560px) {
 
-/*------NAVIGACE----*/
-
-    .navigace {
+    nav {
+        flex-wrap: nowrap;
         justify-content: start;
-        padding-top: 1rem;
     }
 
     .navi {
-        padding: 1rem;
+        padding: 1rem 0.5rem 1rem 2rem;
+        max-width: 9rem;
     }
 
-    .appka {
-        padding-left: 2rem;
+    .zdarma {
+        max-width: 12rem;
     }
+   
 
-/*------HLAVIČKA----*/
 
     h1 {
         font-size: 4.5rem;
@@ -143,6 +149,7 @@ p {
     .slogan {
         font-size: 2.5rem;
         padding: 2rem 0;
+        line-height: 150%;
     }
 
     .button1,
@@ -154,7 +161,6 @@ p {
         margin: 0 1rem 1rem 0;
     }
 
-/*------OBSAH----*/
 
     .obsah {
         flex-wrap: nowrap;
@@ -172,44 +178,31 @@ p {
         padding-top: 0;
     }
    
-/*------PATIČKA----*/
 
-    .paticka {
+    footer {
         margin-bottom: 5rem;
-    }
-
-    body {
-        border-bottom: 1px solid rgb(75, 74, 74);
     }
 }
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
 
-    main {
+    .telo {
         box-shadow: rgba(0, 0, 0, 0.7) 2px 1px 10px;
         padding: 0;
     }
 
     body {
        padding: 0 5rem 1rem 5rem;
-       border-bottom: 1px solid rgb(105, 105, 105);
    }
 
-/*------NAVIGACE----*/
-
-    .navigace {
-        padding-top: 0;
-    }
-/*------HLAVIČKA----*/
-
-.hlavicka {
+    header {
     background-image: 
         url("images/telefon.png"),
         linear-gradient(to right, rgba(37,19,61,1) 0%, rgba(170,84,119,1) 75%);
     background-repeat: no-repeat;
     background-size: contain;
-    
+    background-position: right;    
 }
     .button1,
     .button2 {
@@ -217,9 +210,7 @@ p {
         width: 12rem;
     }
 
-/*------OBSAH----*/
-
-    .obsah {
+   .obsah {
         flex-wrap: nowrap;
     }
 
@@ -235,15 +226,5 @@ p {
         padding-top: 0;
         font-size: 16px;
     }
-
-/*------PATIČKA----*/
-
-    .paticka {
-        margin: 0;
-    }
-
-   
-
-
+     
 }
-
