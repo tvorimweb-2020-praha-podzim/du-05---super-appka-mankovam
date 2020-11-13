@@ -16,12 +16,12 @@ body {
     justify-content: space-around;
     background-color: #fff;
     color: #48418e;
-    padding-top: 1rem;
 }
 
 .navi {
     padding: 1rem 2rem;
-    flex-grow: 1 1 50%;
+    flex: 1 1 50%;
+    text-align: center;
 }
 
 .appka {
@@ -63,12 +63,15 @@ h1 {
     border: 1px solid #fff;
 }
 
-.button1 a:hover,
+.buttony a:hover
+/*
 .button1 a:focus,
 .button1 a:active, 
 .button2 a:hover,
 .button2 a:focus,
-.button2 a:active {
+.button2 a:active
+*/
+{
     background-color:#48418e;
 }
 
@@ -116,7 +119,7 @@ p {
     text-align: center;
 }
 
-@media screen and (min-width: 460px) {
+@media screen and (min-width: 560px) {
 
 /*------NAVIGACE----*/
 
@@ -171,20 +174,10 @@ p {
         order: 1;
         padding-top: 0;
     }
-   
-/*------PATIČKA----*/
-
-    .paticka {
-        margin-bottom: 5rem;
-    }
-
-    body {
-        border-bottom: 1px solid rgb(75, 74, 74);
-    }
 }
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
 
     main {
         box-shadow: rgba(0, 0, 0, 0.7) 2px 1px 10px;
@@ -193,7 +186,6 @@ p {
 
     body {
        padding: 0 5rem 1rem 5rem;
-       border-bottom: 1px solid rgb(105, 105, 105);
    }
 
 /*------NAVIGACE----*/
@@ -206,9 +198,10 @@ p {
 .hlavicka {
     background-image: 
         url("images/telefon.png"),
-        linear-gradient(to right, rgba(37,19,61,1) 0%, rgba(170,84,119,1) 75%);
+        linear-gradient(to right, rgba(37,19,61,1) 25%, rgba(170,84,119,1) 100%);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: right;
     
 }
     .button1,
